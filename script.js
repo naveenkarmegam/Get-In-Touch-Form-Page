@@ -9,6 +9,7 @@ headpara.innerHTML = 'Welcome to our User Form Page! This form is designed to ga
 const form = document.getElementById("form");
 const table = document.getElementById("dataTable");
 const tbody = table.querySelector("tbody");
+let rowCount = 1;
 
 form.addEventListener("submit",(e)=> {
     e.preventDefault();
@@ -23,26 +24,22 @@ form.addEventListener("submit",(e)=> {
     const state = document.getElementById("state").value;
     const country = document.getElementById("country").value;
 
-
-
     const newRow = tbody.insertRow(tbody.rows.length);
-    const cell1 = newRow.insertCell(0);
-    const cell2 = newRow.insertCell(1);
-    const cell3 = newRow.insertCell(2);
-    const cell4 = newRow.insertCell(3);
-    const cell5 = newRow.insertCell(4);
-    const cell6 = newRow.insertCell(5);
-    const cell7 = newRow.insertCell(6);
-    const cell8 = newRow.insertCell(7);
+    const cell1 = newRow.insertCell(0).textContent = rowCount;
+    const cell2 = newRow.insertCell(1).textContent = firstName;
+    const cell3 = newRow.insertCell(2).textContent = lastName;
+    const cell4 = newRow.insertCell(3).textContent = address;
+    const cell5 = newRow.insertCell(4).textContent = pincode;
+    const cell6 = newRow.insertCell(5).textContent = gender;
+    const cell7 = newRow.insertCell(6).textContent = foods;
+    const cell8 = newRow.insertCell(7).textContent = state;
+    const cell9 = newRow.insertCell(8).textContent = country;
 
-    cell1.innerHTML = firstName;
-    cell2.innerHTML = lastName;
-    cell3.innerHTML = address;
-    cell4.innerHTML = pincode;
-    cell5.innerHTML = gender;
-    cell6.innerHTML = foods;
-    cell7.innerHTML = state;
-    cell8.innerHTML = country;
+    rowCount++;
 
-    form.reset(); // Clear the form fields
+    form.reset(); 
+
+    
+    table.style.display = 'table';
+    table.scrollIntoView({ behavior: 'smooth' })
 });

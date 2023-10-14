@@ -17,15 +17,15 @@ p {
     font-size: 20px !important;
     font-weight:400 !important;
 }
-.input input, textarea {
+.form-group input, textarea {
     font-size: 15px;
-    border-color: #9f01ea !important;
+    border: 1px solid #9f01ea !important;
 }
 .input.success input  {
     border-color: green;
 }
 .input.error input  {
-    border-color: green;
+    border-color: red;
 }
 #gender-radio {
     display: flex;
@@ -33,13 +33,6 @@ p {
 }
 label {
     font-weight: 500;
-}
-input[type=number]::-webkit-inner-spin-button, 
-input[type=number]::-webkit-outer-spin-button { 
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    margin: 0; 
 }
 
 .error {
@@ -69,6 +62,7 @@ fieldset {
     width: 50%;
     font-size: 25px;
     border: none;
+    font-weight: 500;
 }
 #submit:hover {
     background: green;
@@ -79,5 +73,17 @@ fieldset {
 .table {
     margin-bottom: 200px !important;
    
+}
+.table thead tr th {
+    background: blueviolet;
+    color: white;
+    text-align: center;
+    border-bottom: 3px solid white;
+}
+
+.table tbody tr td {
+    background: white;
+    text-align: center;
+    border-bottom: 1px solid black;
 }
 
